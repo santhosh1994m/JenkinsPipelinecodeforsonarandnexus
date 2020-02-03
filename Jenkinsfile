@@ -7,13 +7,17 @@ pipeline {
             echo 'started'
             }
         }
-        stage('chage path') { 
+        stage('remove the old path') { 
             steps 
             {          
                   sh 'if [ -d maventest ]; then sudo rm -rf maventest; fi' 
-                  sh cd 'maventest'
+           
             }        
-             }       
+             }   
+        stage('change the path'){
+            step {
+                sh 'cd maventest'
+            }}
         stage('git clone') 
         {         
             steps 
