@@ -31,16 +31,17 @@ pipeline {
         }  
         stage('change the path'){
             steps {
-                args 'cd maventest'
+                sh 'cd maventest'
             }
             }
-        stage('Build') {
-            steps {
-                sh 'mvn -B -DskipTests clean package'
-     
-        }
-      }
-    
+        
+        stage ('Build project') {
+             steps {
+              dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
+                sh 'mvn clean verify
+ 
+                  }
+             } 
     }
     
 }
