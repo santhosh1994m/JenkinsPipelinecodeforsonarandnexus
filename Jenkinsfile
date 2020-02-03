@@ -22,7 +22,7 @@ tools {
         {         
             steps 
             {  
-                 sh 'sudo git clone https://github.com/santhosh1994m/maventest.git'      
+                 sh 'sudo git clone https://github.com/santhosh1994m/maventest.git && sudo chown jenkins:jenkins /var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/'      
             }    
         }    
        stage('sleep') 
@@ -32,10 +32,11 @@ tools {
               sh 'sleep 10'   
             }  
         }       
+             
           stage('Build') {
             steps {
                 dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
-                sh ' pwd && mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
                 }
             }
         }
