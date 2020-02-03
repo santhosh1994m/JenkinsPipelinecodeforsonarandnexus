@@ -34,12 +34,10 @@ pipeline {
                 sh 'cd maventest'
             }
             }
-        
-      stages {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
-            }
+     
         }
       }
     
