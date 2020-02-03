@@ -10,7 +10,8 @@ pipeline {
         stage('chage path') { 
             steps 
             {          
-                  sh 'if [ -d maventest ]; then sudo rm -rf maventest; fi'        
+                  sh 'if [ -d maventest ]; then sudo rm -rf maventest; fi' 
+                  sh cd 'maventest'
             }        
              }       
         stage('git clone') 
