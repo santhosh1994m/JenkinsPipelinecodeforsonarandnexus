@@ -10,7 +10,7 @@ pipeline {
         stage('chage path') { 
             steps 
             {          
-                  sh 'if [ -d JenkinsPipelinecodeforsonarandnexus ]; then sudo rm -rf JenkinsPipelinecodeforsonarandnexus; fi'        
+                  sh 'if [ -d maventest ]; then sudo rm -rf maventest; fi'        
             }        
              }       
         stage('git clone') 
