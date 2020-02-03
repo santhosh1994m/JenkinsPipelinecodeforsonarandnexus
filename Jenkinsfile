@@ -32,7 +32,7 @@ pipeline {
         stage ('Build project') {
              steps {
               dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests package'
               }
                   }
              } 
