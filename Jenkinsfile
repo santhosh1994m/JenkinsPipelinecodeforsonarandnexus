@@ -31,7 +31,7 @@ pipeline {
         }  
         stage('change the path'){
             steps {
-                sh 'cd maventest'
+                args 'cd maventest'
             }
             }
         stage('Build') {
