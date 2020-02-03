@@ -38,7 +38,7 @@ pipeline {
         stage ('Build project') {
              steps {
               dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
-                sh 'mvn clean verify
+                sh 'mvn -B -DskipTests clean package'
  
                   }
              } 
