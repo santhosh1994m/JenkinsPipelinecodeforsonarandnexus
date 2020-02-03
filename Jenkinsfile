@@ -28,13 +28,7 @@ pipeline {
             {      
               sh 'sleep 10'   
             }  
-        }  
-        stage('change the path'){
-            steps {
-                sh 'cd maventest'
-            }
-            }
-        
+        }     
         stage ('Build project') {
              steps {
               dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
