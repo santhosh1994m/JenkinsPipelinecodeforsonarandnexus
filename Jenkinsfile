@@ -26,7 +26,14 @@ pipeline {
             {      
               sh 'sleep 10'   
             }  
-        }      
+        }  
+        
+       stage ('Build') {
+            steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true package' 
+            }
+       }
+        
    
     
     }
