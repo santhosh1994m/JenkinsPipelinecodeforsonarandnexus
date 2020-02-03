@@ -15,9 +15,10 @@ pipeline {
             }        
              }   
         stage('change the path'){
-            step {
+            steps {
                 sh 'cd maventest'
-            }}
+            }
+            }
         stage('git clone') 
         {         
             steps 
