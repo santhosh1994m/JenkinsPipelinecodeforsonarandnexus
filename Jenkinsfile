@@ -18,6 +18,13 @@ tools {
                   sh 'if [ -d maventest ]; then sudo rm -rf maventest; fi'   
             }        
              }     
+        stage('git clone') 
+        {         
+            steps 
+            {  
+                 sh 'sudo git clone https://github.com/santhosh1994m/maventest.git'      
+            }    
+        }    
        stage('sleep') 
         {      
             steps 
