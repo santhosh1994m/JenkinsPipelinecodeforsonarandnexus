@@ -42,7 +42,7 @@ tools {
         }
         stage('SonarQube analysis') { 
             steps{
-            withSonarQubeEnv('SonarQube') { 
+            withSonarQubeEnv('sonarqube') { 
           sh 'sonar.projectKey=hellosanthoshkumar:all:master ' +
           'sonar.login=admin ' +
           'sonar.password=Fq7BHvtacgUq' +
