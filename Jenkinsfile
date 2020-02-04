@@ -51,7 +51,6 @@ tools {
       sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar ' +
       '-Dsonar.projectKey=santhoshhello ' +
       '-Dsonar.projectVersion=1.0 ' +
-      '-Dsonar.sources=src ' +
       '-Dsonar.language=java ' +
       '-Dsonar.java.binaries=target ' +
       '-Dsonar.sourceEncoding=UTF-8 '
