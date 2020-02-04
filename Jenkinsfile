@@ -33,13 +33,7 @@ tools {
             }  
         }       
              
-          stage('Build') {
-            steps {
-                dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
-                sh 'mvn -B -DskipTests clean package'
-                }
-            }
-        }
+        
         
   stage('SonarQube analysis') {
       tools {
