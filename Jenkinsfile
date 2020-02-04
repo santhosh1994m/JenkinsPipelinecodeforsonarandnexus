@@ -40,18 +40,27 @@ tools {
                 }
             }
         }
+        
+         stage('ScanCode') {
+            steps {
+                def scannerHome = tool 'SonarQubeScanner3'
+                withSonarQubeEnv('SonarQube') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+            }
+        }
      
         stage('SonarQube analysis') { 
-         steps('Sonar') { 
-          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar ' + 
-          '-f all/pom.xml ' +
-          '-Dsonar.projectKey=hellosanthoshkumar:all:master ' +
-          '-Dsonar.login=admin ' +
-          '-Dsonar.password=Fq7BHvtacgUq' +
-          '-Dsonar.language=java ' +
-          '-Dsonar.sources=src ' +
-          '-Dsonar.java.binaries=target' +
-          '-Dsonar.sourceEncoding=UTF-8'
+         steps('Sonar')
+            def scannerHome = tool 'sonarqube'
+            withSonarQubeEnv('SonarQube') { 
+          sh 'sonar.projectKey=hellosanthoshkumar:all:master ' +
+          'sonar.login=admin ' +
+          'sonar.password=Fq7BHvtacgUq' +
+          'sonar.language=java ' +
+          'sonar.sources=src ' +
+          'sonar.java.binaries=target' +
+          'sonar.sourceEncoding=UTF-8'
         }
     }
        
