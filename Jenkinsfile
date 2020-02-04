@@ -48,13 +48,13 @@ tools {
     steps {
         withSonarQubeEnv('Sonarqube_home'){
         dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){// You can override the credential to be used
-      sh 'var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner' +
-      '-Dsonar.projectKey=santhoshhello' +
-      '-Dsonar.projectVersion=1.0' +
-      '-Dsonar.sources=src' +
-      '-Dsonar.language=java' +
-      '-Dsonar.java.binaries=target' +
-      '-Dsonar.sourceEncoding=UTF-8'
+      sh 'var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner ' +
+      '-Dsonar.projectKey=santhoshhello ' +
+      '-Dsonar.projectVersion=1.0 ' +
+      '-Dsonar.sources=src ' +
+      '-Dsonar.language=java ' +
+      '-Dsonar.java.binaries=target ' +
+      '-Dsonar.sourceEncoding=UTF-8 '
         }
     }
   }
