@@ -40,18 +40,8 @@ tools {
                 }
             }
         }
-        
-         stage('ScanCode') {
-            steps {
-                def scannerHome = tool 'SonarQubeScanner3'
-                withSonarQubeEnv('SonarQube') {
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
-        }
-     
         stage('SonarQube analysis') { 
-         steps('Sonar')
+            steps{
             def scannerHome = tool 'sonarqube'
             withSonarQubeEnv('SonarQube') { 
           sh 'sonar.projectKey=hellosanthoshkumar:all:master ' +
@@ -63,6 +53,7 @@ tools {
           'sonar.sourceEncoding=UTF-8'
         }
     }
+        }
        
         
     }
