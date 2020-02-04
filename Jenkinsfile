@@ -42,8 +42,11 @@ tools {
         }
         
   stage('SonarQube analysis') {
-    withSonarQubeEnv(credentialsId: '', installationName: 'sonarqube_home') { // You can override the credential to be used
-      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+    withSonarQubeEnv(credentialsId: '7d2925cc122574560e4b94074d2cace3b821852b', installationName: 'sonarqube_home') { // You can override the credential to be used
+      sh 'mvn sonar:sonar' +
+      '-Dsonar.projectKey=santhoshhello' +
+      '-Dsonar.host.url=https://35.229.112.150' + 
+      '-Dsonar.login=7d2925cc122574560e4b94074d2cace3b821852b'
     }
   }
 }
