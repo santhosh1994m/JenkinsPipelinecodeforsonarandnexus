@@ -48,7 +48,7 @@ tools {
     steps {
         
         dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){// You can override the credential to be used
-      sh '/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner' +
+      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.1744:sonar' +
       '-Dsonar.projectKey=santhoshhello' +
       '-Dsonar.host.url=https://35.229.112.150' + 
       '-Dsonar.login=7d2925cc122574560e4b94074d2cace3b821852b' +
