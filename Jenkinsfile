@@ -42,7 +42,8 @@ tools {
         }
         
   stage('SonarQube analysis') {
-    steps { // You can override the credential to be used
+    steps {
+        dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){// You can override the credential to be used
       sh 'mvn sonar:sonar' +
       '-Dsonar.projectKey=santhoshhello' +
       '-Dsonar.host.url=https://35.229.112.150' + 
@@ -53,6 +54,7 @@ tools {
       '-Dsonar.language=java' +
       '-Dsonar.java.binaries=target' +
       '-Dsonar.sourceEncoding=UTF-8'
+        }
     }
   }
 
