@@ -42,7 +42,7 @@ tools {
         }
         stage('SonarQube analysis') { 
             steps{
-            def scannerHome = tool 'sonarqube'
+            scannerHome = tool 'sonarqube'
             withSonarQubeEnv('SonarQube') { 
           sh 'sonar.projectKey=hellosanthoshkumar:all:master ' +
           'sonar.login=admin ' +
