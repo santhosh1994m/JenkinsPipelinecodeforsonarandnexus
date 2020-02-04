@@ -42,7 +42,11 @@ tools {
         }
         
   stage('SonarQube analysis') {
+      tools {
+                   jdk 'JAVA_HOME11'
+                }
     steps {
+        
         dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){// You can override the credential to be used
       sh '/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner' +
       '-Dsonar.projectKey=santhoshhello' +
