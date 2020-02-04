@@ -44,7 +44,7 @@ tools {
         stage ('SonarQube Analysis'){
 steps{
 dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){
-withSonarQubeEnv('SonarQube5.3') {
+withSonarQubeEnv('sonarqube_home') {
 sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
 }
 }
