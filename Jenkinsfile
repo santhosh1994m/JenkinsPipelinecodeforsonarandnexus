@@ -50,9 +50,7 @@ tools {
         dir("/var/lib/jenkins/workspace/OFFICIALDECLARATIVEPIPELINE/maventest/"){// You can override the credential to be used
       sh '' +
       '-Dsonar.projectKey=santhoshhello' +
-      '-Dsonar.host.url=https://35.229.112.150' + 
-      '-Dsonar.login=7d2925cc122574560e4b94074d2cace3b821852b' +
-      '-Dsonar.projectName=Simple Java project analyzed with the SonarQube Runner' +
+      '-Dsonar.projectName=Simple Java project analyzed with the SonarQube Runnerq' +
       '-Dsonar.projectVersion=1.0' +
       '-Dsonar.sources=src' +
       '-Dsonar.language=java' +
