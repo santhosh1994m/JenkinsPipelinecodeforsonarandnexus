@@ -5,6 +5,7 @@ tools {
     maven 'MAVEN_HOME'
     jdk 'JAVA_HOME'
     git 'GIT_HOME'
+    scannerHome = tool 'sonarqube'
                 }
     stages {
         stage(Start) {
@@ -42,7 +43,6 @@ tools {
         }
         stage('SonarQube analysis') { 
             steps{
-            scannerHome = tool 'sonarqube'
             withSonarQubeEnv('SonarQube') { 
           sh 'sonar.projectKey=hellosanthoshkumar:all:master ' +
           'sonar.login=admin ' +
