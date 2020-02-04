@@ -37,7 +37,7 @@ tools {
         
   stage('SonarQube analysis') {
       tools {
-                   jdk 'JAVA_HOME11'
+                   jdk 'JAVA_HOME'
                 }
     steps {
         withSonarQubeEnv('Sonarqube_home'){
