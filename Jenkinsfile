@@ -5,7 +5,7 @@ tools {
     maven 'MAVEN_HOME'
     jdk 'JAVA_HOME'
     git 'GIT_HOME'
-    scannerHome = tool 'sonarqube'
+    scannerHome 'sonarqube'
                 }
     stages {
         stage(Start) {
