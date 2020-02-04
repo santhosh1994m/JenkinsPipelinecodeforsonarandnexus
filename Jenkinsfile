@@ -41,6 +41,21 @@ tools {
             }
         }
      
+        stage('SonarQube analysis') { 
+         steps('Sonar') { 
+          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar ' + 
+          '-f all/pom.xml ' +
+          '-Dsonar.projectKey=hellosanthoshkumar:all:master ' +
+          '-Dsonar.login=admin ' +
+          '-Dsonar.password=Fq7BHvtacgUq' +
+          '-Dsonar.language=java ' +
+          '-Dsonar.sources=src ' +
+          '-Dsonar.java.binaries=target' +
+          '-Dsonar.sourceEncoding=UTF-8'
+        }
+    }
+       
+        
     }
     
 }
