@@ -47,9 +47,10 @@ tools {
       '-Dsonar.projectKey=santhoshhello' +
       '-Dsonar.host.url=https://35.229.112.150' + 
       '-Dsonar.login=7d2925cc122574560e4b94074d2cace3b821852b'
+      
     }
   }
-}
+
        
     }
     
