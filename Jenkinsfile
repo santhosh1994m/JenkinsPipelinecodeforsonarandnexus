@@ -50,8 +50,8 @@ tools {
       '-Dsonar.projectName=Simple Java project analyzed with the SonarQube Runner' +
       '-Dsonar.projectVersion=1.0' +
       '-Dsonar.sources=src' +
-      '-Dsonar.language=java'
-      '-Dsonar.java.binaries=target'
+      '-Dsonar.language=java' +
+      '-Dsonar.java.binaries=target' +
       '-Dsonar.sourceEncoding=UTF-8'
     }
   }
